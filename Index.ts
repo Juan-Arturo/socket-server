@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 
 
-const server = new Server();
+const server =  Server.instance;
 
 
 // BodyParser
@@ -13,6 +13,8 @@ server.app.use( bodyParser.json() );
 
 // CORS
 server.app.use( cors({ origin: true, credentials: true  }) );
+
+
 
 
 // Rutas de servicios
